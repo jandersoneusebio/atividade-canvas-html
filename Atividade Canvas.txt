@@ -1,0 +1,10 @@
+1 - Com suas palavras descreva o que e a DOM e qual sua relacao com o HTML?
+2 - O que e o canvas HTML?
+Canvas HTML e um elemento que permite o programador "desenhar" em um determinado local no documento HTML utilizando JavaScript, podendo ser utilizado para criar animacoes, desenhos e ate mesmo jogos.
+
+3 - Quais as linguagens e tecnologias comumente envolvidas no desenvolvimento de produtos baseados em
+canvas html?
+HTML e JavaScript.
+
+4 - Explique para que serve o codigo “document.getElementById()”
+Utilizado no JavaScript, este metodo permite que a aplicacao recupere dados de um elemento pelo seu identificador (declarado como atributo na tag do elemento, ex.: <canvas id="canvasHtml">), sendo possivel acessar e alterar propriedades do elemento tais como seu valor e propriedades CSS.

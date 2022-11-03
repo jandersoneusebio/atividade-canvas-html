@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - 5 - A</title>
+</head>
+<body>
+    <canvas id="canvas" width="1280" height="720">
+        
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+
+        const ctx = canvas.getContext("2d");
+
+        const drawTriangle = (x, y, outlined) => {
+
+            ctx.beginPath();
+            ctx.moveTo(x + 5, y + 75);
+            ctx.lineTo(x + 50, y + 5);
+            ctx.lineTo(x + 95, y + 75);
+            ctx.closePath();
+
+            ctx.lineWidth = 2;
+            ctx.strokeStyle= "#0099ff";
+            ctx.stroke();
+
+            if(outlined){
+                ctx.fillStyle = "#0099ff";
+            } else {
+                ctx.fillStyle = 'rgba(0,0,0,0)';
+            }
+
+            ctx.fill();
+        }
+
+        // Rect
+        ctx.beginPath();
+        ctx.rect(2, 2, 320, 180);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle= "#0099ff";
+        ctx.stroke();
+        ctx.closePath();
+
+        // Triangle inside Rect
+        ctx.beginPath();
+        ctx.moveTo(110, 125);
+        ctx.lineTo(160, 45);
+        ctx.lineTo(210, 125);
+        ctx.closePath();
+        
+        ctx.lineWidth = 2;
+        ctx.strokeStyle= "#0099ff";
+        ctx.stroke();
+
+        // Circle
+        ctx.beginPath();
+        ctx.arc(500, 90, 50, 0, Math.PI * 2, true);
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.closePath();
+
+        // Square inside Circle
+        ctx.beginPath();
+        ctx.rect(470, 60, 60, 60);
+        ctx.fillStyle = "#00a6ff";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle= "#0099ff";
+        ctx.stroke();
+        ctx.closePath();
+
+        // Two triangles
+        ctx.beginPath();
+        ctx.moveTo(710, 125);
+        ctx.lineTo(760, 45);
+        ctx.lineTo(810, 125);
+        ctx.closePath();
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle= "#0099ff";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(770, 125);
+        ctx.lineTo(820, 45);
+        ctx.lineTo(870, 125);
+        ctx.closePath();
+        
+        ctx.lineWidth = 2;
+        ctx.strokeStyle= "#0099ff";
+        ctx.stroke();
+
+        // drawTriangle(600, 60, false);
+        // drawTriangle(660, 60, false);
+
+
+
+    </script>
+</body>
+</html>
